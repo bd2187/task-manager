@@ -9,7 +9,8 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
+            { test: /\.css$/, use: ["style-loader", "css-loader"] }
         ]
     },
     devtool: "cheap-module-eval-source-map",
@@ -19,7 +20,7 @@ module.exports = {
     plugins: [
         new HtmlWebPackPlugin({
             template: "./index.html",
-            filename: "./index.html"
+            filename: "index.html"
         })
     ]
 };
