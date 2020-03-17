@@ -1,9 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './styles/normalize.css';
+import { Provider } from 'react-redux';
+import store from './reducers/store';
 
-const App = function() {
-  return <h1>hello world</h1>;
-};
+import routes from './config/routes';
 
-render(<App />, document.getElementById('root'));
+render(
+    <Provider store={store}>{routes}</Provider>,
+    document.getElementById('root')
+);
