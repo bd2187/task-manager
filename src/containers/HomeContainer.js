@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Home from '../components/Home/Home';
+import GuestLanding from '../components/GuestLanding/GuestLanding';
 
 function HomeContainer() {
-    return <Home />;
+    return <GuestLanding />;
 }
 
 export default HomeContainer;
