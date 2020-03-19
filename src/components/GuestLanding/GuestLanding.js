@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GuestLandingStyles from './GuestLandingStyles';
 
 class GuestLanding extends React.Component {
     constructor(props) {
@@ -31,42 +32,50 @@ class GuestLanding extends React.Component {
         const { password, email } = this.state;
 
         return (
-            <div>
-                <h1>Task Manager</h1>
-                <p>Login</p>
-                <div>
-                    <button type="button">Log in with Google</button>
-                    <button type="button">Log in with Facebook</button>
+            <GuestLandingStyles>
+                <h1 className="logo">Task Manager</h1>
+                <div className="login-inner">
+                    <p className="login-inner__title">Login</p>
+
+                    <button className="login-btn" type="button">
+                        Log in with Google
+                    </button>
+                    <button className="login-btn" type="button">
+                        Log in with Facebook
+                    </button>
                 </div>
-                <div>
-                    <p>OR</p>
+                <div className="divider">
+                    <p className="divider__text">OR</p>
                 </div>
 
-                <label htmlFor="email">
-                    <p>Email</p>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        value={email}
-                        onChange={this.updateInputValue}
-                    />
-                </label>
-
-                <label htmlFor="password">
-                    <p>Password</p>
-                    <div>
+                <div className="login-inner">
+                    <label htmlFor="email">
+                        <p className="login-inner__label">Email</p>
                         <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            value={password}
+                            type="email"
+                            className="login-inner__input"
+                            name="email"
+                            id="email"
+                            value={email}
                             onChange={this.updateInputValue}
                         />
-                        {/* <p>eyeball goes here</p> */}
-                    </div>
-                </label>
+                    </label>
 
+                    <label htmlFor="password">
+                        <p className="login-inner__label">Password</p>
+                        <div>
+                            <input
+                                type="password"
+                                className="login-inner__input"
+                                id="password"
+                                name="password"
+                                value={password}
+                                onChange={this.updateInputValue}
+                            />
+                            {/* <p>eyeball goes here</p> */}
+                        </div>
+                    </label>
+                </div>
                 <button type="button">Log in</button>
 
                 <label htmlFor="keepLoggedIn">
@@ -84,7 +93,7 @@ class GuestLanding extends React.Component {
                     Not sure if you&apos;d like to register?
                     <Link to="/dashboard">Try as guest user</Link>
                 </p>
-            </div>
+            </GuestLandingStyles>
         );
     }
 }
