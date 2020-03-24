@@ -38,9 +38,11 @@ class GuestLanding extends React.Component {
                     <p className="login-inner__title">Login</p>
 
                     <button className="login-btn" type="button">
+                        <i className="fab fa-google login-btn__logo" />
                         Log in with Google
                     </button>
                     <button className="login-btn" type="button">
+                        <i className="fab fa-facebook-square login-btn__logo" />
                         Log in with Facebook
                     </button>
                 </div>
@@ -76,7 +78,7 @@ class GuestLanding extends React.Component {
                         </div>
                     </label>
                 </div>
-                <button className="login-inner__input" type="button">
+                <button className="login-inner__login-btn" type="button">
                     Log in
                 </button>
 
