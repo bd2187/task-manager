@@ -64,6 +64,23 @@ const GuestLandingStyles = styled.div`
             background: #fff;
         }
     }
+
+    .keep-login {
+        display: flex;
+        width: max-content;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .keep-login #keepLoggedIn {
+        margin-right: 5px;
+    }
+
+    .footer-text {
+        text-align: center;
+        margin: 20px auto;
+        font-size: 13px;
+    }
 `;
 
 export default GuestLandingStyles;
