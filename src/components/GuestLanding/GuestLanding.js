@@ -76,21 +76,25 @@ class GuestLanding extends React.Component {
                         </div>
                     </label>
                 </div>
-                <button type="button">Log in</button>
+                <button className="login-inner__input" type="button">
+                    Log in
+                </button>
 
-                <label htmlFor="keepLoggedIn">
+                <label htmlFor="keepLoggedIn" className="keep-login">
                     <input type="checkbox" id="keepLoggedIn" />
-                    <p>Keep me logged in</p>
+                    Keep me logged in
                 </label>
 
                 <hr />
 
-                <p>
+                <p className="footer-text">
                     Don&apos;t have an account?{' '}
                     <Link to="/signup">Sign up</Link>
                 </p>
-                <p>
+                <p className="footer-text">
                     Not sure if you&apos;d like to register?
+                    <br />
+                    <br />
                     <Link to="/dashboard">Try as guest user</Link>
                 </p>
             </GuestLandingStyles>
