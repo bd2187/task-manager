@@ -8,8 +8,10 @@ class GuestLanding extends React.Component {
         this.state = {
             email: '',
             password: '',
+            showPassword: false,
         };
         this.updateInputValue = this.updateInputValue.bind(this);
+        this.togglePassword = this.togglePassword.bind(this);
     }
 
     updateInputValue(evt) {
@@ -28,8 +30,14 @@ class GuestLanding extends React.Component {
         }
     }
 
+    togglePassword() {
+        this.setState(state => {
+            return { showPassword: !state.showPassword };
+        });
+    }
+
     render() {
-        const { password, email } = this.state;
+        const { password, email, showPassword } = this.state;
 
         return (
             <GuestLandingStyles>
@@ -72,14 +80,24 @@ class GuestLanding extends React.Component {
                         </div>
                         <div>
                             <input
-                                type="password"
+                                type={showPassword ? 'text' : 'password'}
                                 className="login-inner__input"
                                 id="password"
                                 name="password"
                                 value={password}
                                 onChange={this.updateInputValue}
                             />
-                            <i className="far fa-eye" />
+                            {showPassword ? (
+                                <i
+                                    className="far fa-eye-slash"
+                                    onClick={this.togglePassword}
+                                />
+                            ) : (
+                                <i
+                                    className="far fa-eye"
+                                    onClick={this.togglePassword}
+                                />
+                            )}
                         </div>
                     </label>
                 </div>
