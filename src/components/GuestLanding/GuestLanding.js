@@ -64,7 +64,12 @@ class GuestLanding extends React.Component {
                     </label>
 
                     <label htmlFor="password">
-                        <p className="login-inner__label">Password</p>
+                        <div className="password-header">
+                            <p className="login-inner__label">Password</p>
+                            <Link to="/forgotpassword">
+                                Forgot your password?
+                            </Link>
+                        </div>
                         <div>
                             <input
                                 type="password"
@@ -74,7 +79,7 @@ class GuestLanding extends React.Component {
                                 value={password}
                                 onChange={this.updateInputValue}
                             />
-                            {/* <p>eyeball goes here</p> */}
+                            <i className="far fa-eye" />
                         </div>
                     </label>
                 </div>
