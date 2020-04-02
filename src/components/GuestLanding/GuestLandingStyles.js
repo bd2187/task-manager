@@ -11,7 +11,6 @@ const GuestLandingStyles = styled.div`
 
     a {
         color: ${primaryColor};
-        text-decoration: underline;
     }
 
     .logo {
@@ -70,6 +69,16 @@ const GuestLandingStyles = styled.div`
             font-weight: 600;
             letter-spacing: 0.4px;
         }
+
+        .password-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+                font-size: 14px;
+            }
+        }
     }
 
     .login-inner__login-btn {
@@ -100,6 +109,7 @@ const GuestLandingStyles = styled.div`
         width: max-content;
         align-items: center;
         margin-bottom: 25px;
+        font-size: 14px;
         cursor: pointer;
     }
 
