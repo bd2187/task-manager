@@ -79,6 +79,28 @@ const GuestLandingStyles = styled.div`
                 font-size: 14px;
             }
         }
+
+        .password-inner-container {
+            position: relative;
+
+            .login-inner__input {
+                padding-right: 30px;
+            }
+
+            .password-inner-container__icon {
+                position: absolute;
+                top: 0;
+                right: 5px;
+                bottom: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+            }
+        }
     }
 
     .login-inner__login-btn {
