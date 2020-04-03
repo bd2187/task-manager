@@ -7,6 +7,13 @@ const TaskMenuStyles = styled.div`
     left: 0;
     bottom: 0;
     width: 80%;
+
+    .task-menu__list,
+    .task-menu__expansions {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
 `;
 
 export default TaskMenuStyles;
