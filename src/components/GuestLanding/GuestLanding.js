@@ -78,7 +78,7 @@ class GuestLanding extends React.Component {
                                 Forgot your password?
                             </Link>
                         </div>
-                        <div>
+                        <div className="password-inner-container">
                             <input
                                 type={showPassword ? 'text' : 'password'}
                                 className="login-inner__input"
@@ -87,14 +87,16 @@ class GuestLanding extends React.Component {
                                 value={password}
                                 onChange={this.updateInputValue}
                             />
+
                             {showPassword ? (
+                                /*eslint-disable */
                                 <i
-                                    className="far fa-eye-slash"
+                                    className="far fa-eye-slash password-inner-container__icon"
                                     onClick={this.togglePassword}
                                 />
                             ) : (
                                 <i
-                                    className="far fa-eye"
+                                    className="far fa-eye password-inner-container__icon"
                                     onClick={this.togglePassword}
                                 />
                             )}
